@@ -1,5 +1,4 @@
 #!/bin/bash
-CUR_DIR="$( cd "$(dirname "$0")" >/dev/null 2>&1 ; pwd -P )"
 
 execute() {
     if [[ -n $VERBOSE ]]; then

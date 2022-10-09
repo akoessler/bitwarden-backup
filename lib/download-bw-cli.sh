@@ -6,7 +6,7 @@ echo_header "download bitwarden cli binary"
 echo
 
 DOWNLOAD_LINK_BASE="https://vault.bitwarden.com/download/?app=cli&platform="
-BIN_FOLDER="$TEMP_FOLDER"
+BIN_FOLDER="$TEMP_FOLDER_PATH"
 FILE_NAME_ZIP="$BIN_FOLDER/bw.zip"
 FILE_NAME_CLI="$BIN_FOLDER/bw"
 

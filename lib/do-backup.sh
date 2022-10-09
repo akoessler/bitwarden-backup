@@ -23,7 +23,7 @@ if [[ -z $MASTERPASSWORD ]]; then
 fi
 
 
-EXPORT_FILE="$TEMP_FOLDER/$BACKUP_FILE"
+EXPORT_FILE="$TEMP_FOLDER_PATH/$BACKUP_FILE"
 echo_info "backup file name: $EXPORT_FILE"
 
 

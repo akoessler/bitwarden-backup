@@ -65,18 +65,22 @@ done
 
 if [[ -z $TEMP_FOLDER ]]; then
     TEMP_FOLDER="./temp"
-    if [[ ! -d $TEMP_FOLDER ]]; then
-        echo_verbose "create temp folder"
-        mkdir $TEMP_FOLDER
-    fi
+fi
+TEMP_FOLDER_PATH="$CUR_DIR/$TEMP_FOLDER"
+echo_verbose "using temp folder: $TEMP_FOLDER_PATH"
+if [[ ! -d $TEMP_FOLDER_PATH ]]; then
+    echo_verbose "create temp folder"
+    mkdir $TEMP_FOLDER_PATH
 fi
 
 if [[ -z $INPUT_FOLDER ]]; then
     INPUT_FOLDER="./input"
-    if [[ ! -d $INPUT_FOLDER ]]; then
-        echo_verbose "create input folder"
-        mkdir $INPUT_FOLDER
-    fi
+fi
+INPUT_FOLDER_PATH="$CUR_DIR/$INPUT_FOLDER"
+echo_verbose "using input folder: $INPUT_FOLDER_PATH"
+if [[ ! -d $INPUT_FOLDER_PATH ]]; then
+    echo_verbose "create input folder"
+    mkdir $INPUT_FOLDER_PATH
 fi
 
 if [[ -z $BACKUP_FILE ]]; then
@@ -104,7 +108,7 @@ fi
 if [[ -z $CLIENTID_FILE ]]; then
     CLIENTID_FILE="clientid"
 fi
-CLIENTID_PATH="$INPUT_FOLDER/$CLIENTID_FILE"
+CLIENTID_PATH="$INPUT_FOLDER_PATH/$CLIENTID_FILE"
 if [[ ! -f $CLIENTID_PATH ]]; then
     abort_show_usage "Missing file: $CLIENTID_PATH"
 fi
@@ -112,7 +116,7 @@ fi
 if [[ -z $CLIENTSECRET_FILE ]]; then
     CLIENTSECRET_FILE="clientsecret"
 fi
-CLIENTSECRET_PATH="$INPUT_FOLDER/$CLIENTSECRET_FILE"
+CLIENTSECRET_PATH="$INPUT_FOLDER_PATH/$CLIENTSECRET_FILE"
 if [[ ! -f $CLIENTSECRET_PATH ]]; then
     abort_show_usage "Missing file: $CLIENTSECRET_PATH"
 fi
@@ -120,7 +124,7 @@ fi
 if [[ -z $MASTERPASSWORD_FILE ]]; then
     MASTERPASSWORD_FILE="masterpassword"
 fi
-MASTERPASSWORD_PATH="$INPUT_FOLDER/$MASTERPASSWORD_FILE"
+MASTERPASSWORD_PATH="$INPUT_FOLDER_PATH/$MASTERPASSWORD_FILE"
 if [[ ! -f $MASTERPASSWORD_PATH ]]; then
     abort_show_usage "Missing file: $MASTERPASSWORD_PATH"
 fi
