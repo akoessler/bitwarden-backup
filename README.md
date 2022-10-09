@@ -30,6 +30,11 @@ The export is missing the folders, see: https://github.com/bitwarden/clients/iss
 
 Make sure the secret/password files and the export file are secured from unwanted access!
 
+
+# Requirements
+
+Required preinstalled tools: curl, 7z
+
 ## Usage help text
 
 ```

@@ -58,7 +58,7 @@ if [[ "$DO_DOWNLOAD_BW_CLI" == "true" ]]; then
     fi
 
     echo_verbose "unpacking downloaded zip file"
-    execute unzip -o $FILE_NAME_ZIP -d $BIN_FOLDER
+    execute 7z e $FILE_NAME_ZIP -o$BIN_FOLDER
 
     echo_verbose "unpacking finished"
 
