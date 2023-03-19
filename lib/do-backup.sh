@@ -72,3 +72,6 @@ unset BW_CLIENTSECRET
 if [[ ! -f $EXPORT_FILE ]]; then
     abort_error "file not found after export: $EXPORT_FILE"
 fi
+
+
+cp $EXPORT_FILE $EXPORT_FILE.last
